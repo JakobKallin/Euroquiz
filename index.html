@@ -1,0 +1,47 @@
+<!doctype html>
+<html data-ng-app="Euroquiz">
+	<head>
+		<meta charset="utf-8">
+		<title>Euroquiz</title>
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="libraries/angular.js"></script>
+		<script src="source/extensions.js"></script>
+		<script>
+			var Euroquiz = {};
+		</script>
+		<script src="source/QuestionController.js"></script>
+		<script src="source/Video.js"></script>
+		<script src="source/eurovision.js"></script>
+		<script>
+			var module = angular.module('Euroquiz', []);
+			module.directive('eurovisionVideo', Euroquiz.Video);
+			module.service('eurovision', function() {
+				return Euroquiz.eurovision;
+			});
+		</script>
+	</head>
+	<body data-ng-controller="Euroquiz.QuestionController">
+		<eurovision-video
+			data-video="question.videoID"
+			data-mask="!state.guess"></eurovision-video>
+		<ul class="options">
+			<li
+				data-ng-repeat="option in question.options"
+				data-ng-class="optionClass(option)">
+				<button
+					type="button"
+					data-ng-click="giveAnswer(option)"
+					data-ng-disabled="state.guess">{{option}}</button>
+			</li>
+		</ul>
+		<ul class="controls">
+			<li>
+				<button
+					type="button"
+					data-ng-disabled="!state.guess"
+					data-ng-click="proceed()">Next</button>
+			</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+div, ul {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 15em;
+	margin: 0 auto;
+	font-size: 1.5em;
+	padding: 1em;
+}
+
+button {
+	font-size: 1em;
+	margin: 0;
+	padding: 0.25em;
+	cursor: pointer;
+}
+
+.controls {
+	border-top: 1px solid hsl(0, 0%, 50%);
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+}
+
+	.controls button {
+		display: block;
+		width: 100%;
+	}
+
+figure {
+	position: relative;
+	margin: 0;
+}
+
+	figure iframe {
+		display: block;
+		width: 100%;
+		height: 8.4375em;
+	}
+	
+	figure .mask {
+		position: absolute;
+		left: 0.5em;
+		bottom: 0.5em;
+		width: 5em;
+		height: 1em;
+		background-color: black;
+	}
+
+.options {
+	margin-top: 1em;
+}
+
+	.options > * + * {
+		margin-top: 0.5em;
+	}
+	
+		.options button {
+			display: block;
+			width: 100%;
+		}
+		
+		.options > *.correct button {
+			color: hsl(110, 100%, 50%);
+			font-weight: bold;
+		}
+		
+		.options > *.incorrect button {
+			color: red;
+		}
