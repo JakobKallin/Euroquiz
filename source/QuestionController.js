@@ -29,6 +29,7 @@ Euroquiz.QuestionController = function($scope, eurovision) {
 		var options = incorrect.slice();
 		// Add correct answer at random position.
 		options.splice(options.randomIndex(), 0, correct);
+		options.sort();
 		
 		$scope.question = {
 			videoID: video.id,
