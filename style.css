@@ -1,45 +1,43 @@
-div, ul {
+div, ul, figure {
 	margin: 0;
 	padding: 0;
-}
-
-body {
-	width: 15em;
-	margin: 0 auto;
-	font-size: 1.5em;
-	padding: 1em;
 }
 
 button {
 	font-size: 1em;
 	margin: 0;
-	padding: 0.25em;
 	cursor: pointer;
 }
 
-.controls {
-	border-top: 1px solid hsl(0, 0%, 50%);
-	margin-top: 0.5em;
-	padding-top: 0.5em;
+html {
+	padding: 1.5em;
 }
 
-	.controls button {
-		display: block;
-		width: 100%;
-	}
+body {
+	margin: 0 auto;
+	line-height: 13.5em;
+	text-align: center;
+}
 
-figure {
+.video, .controls {
+	height: 12.5em;
+	width: 22.22em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.video {
 	position: relative;
-	margin: 0;
+	margin: 0 0.5em;
 }
 
-	figure iframe {
+	.video iframe {
 		display: block;
 		width: 100%;
-		height: 8.4375em;
+		height: 100%;
 	}
 	
-	figure .mask {
+	.video .mask {
 		position: absolute;
 		left: 0.5em;
 		bottom: 0.5em;
@@ -48,17 +46,26 @@ figure {
 		background-color: black;
 	}
 
-.options {
-	margin-top: 1em;
+.controls {
+	margin: 0 0.5em;
 }
 
-	.options > * + * {
-		margin-top: 0.5em;
+	.controls button {
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
 	
-		.options button {
+	.options {
+	}
+		
+		.options > * {
 			display: block;
-			width: 100%;
+			height: 2em;
+		}
+		
+		.options > * + * {
+			margin-top: 0.5em;
 		}
 		
 		.options > *.correct button {
@@ -68,4 +75,14 @@ figure {
 		
 		.options > *.incorrect button {
 			color: red;
+		}
+
+	.actions {
+		margin-top: 0.5em;
+		padding-top: 0.5em;
+	}
+		
+		.actions > * {
+			display: block;
+			height: 2em;
 		}

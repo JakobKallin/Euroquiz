@@ -23,25 +23,28 @@
 	</head>
 	<body data-ng-controller="Euroquiz.QuestionController">
 		<eurovision-video
+			class="video"
 			data-video="question.videoID"
-			data-mask="!state.guess"></eurovision-video>
-		<ul class="options">
-			<li
-				data-ng-repeat="option in question.options"
-				data-ng-class="optionClass(option)">
-				<button
-					type="button"
-					data-ng-click="giveAnswer(option)"
-					data-ng-disabled="state.guess">{{option}}</button>
-			</li>
-		</ul>
-		<ul class="controls">
-			<li>
-				<button
-					type="button"
-					data-ng-disabled="!state.guess"
-					data-ng-click="proceed()">Next</button>
-			</li>
-		</ul>
+			data-mask="!state.guess"></eurovision-video><!--
+		--><div class="controls">
+			<ul class="options">
+				<li
+					data-ng-repeat="option in question.options"
+					data-ng-class="optionClass(option)">
+					<button
+						type="button"
+						data-ng-disabled="state.guess"
+						data-ng-click="giveAnswer(option)">{{option}}</button>
+				</li>
+			</ul>
+			<ul class="actions">
+				<li>
+					<button
+						type="button"
+						data-ng-disabled="!state.guess"
+						data-ng-click="proceed()">Next</button>
+				</li>
+			</ul>
+		</div>
 	</body>
 </html>
