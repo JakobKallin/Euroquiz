@@ -33,6 +33,8 @@ Euroquiz.QuestionController = function($scope, eurovision) {
 		var incorrect = eurovision.countries.except(video.country).random(3);
 		var correct = video.country;
 		
+		console.log('Playing ' + video.country);
+		
 		// Put incorrect answers into options.
 		var options = incorrect.slice();
 		// Add correct answer at random position.
