@@ -27,14 +27,17 @@
 			data-video="question.videoID"
 			data-mask="!state.guess"></eurovision-video><!--
 		--><div class="controls">
+			<ul class="points">
+				<li class="correct">{{state.correct}}</li>
+				<li class="incorrect">{{state.incorrect}}</li>
+			</ul>
 			<ul class="options">
-				<li
-					data-ng-repeat="option in question.options"
-					data-ng-class="optionClass(option)">
+				<li data-ng-repeat="option in question.options">
 					<button
 						type="button"
 						data-ng-disabled="state.guess"
-						data-ng-click="giveAnswer(option)">{{option}}</button>
+						data-ng-click="giveAnswer(option)"
+						data-ng-class="optionClass(option)">{{option}}</button>
 				</li>
 			</ul>
 			<ul class="actions">

@@ -1,7 +1,9 @@
 Euroquiz.QuestionController = function($scope, eurovision) {
 	$scope.state = {
 		video: null,
-		guess: null
+		guess: null,
+		correct: 0,
+		incorrect: 0
 	};
 	
 	$scope.optionClass = function(option) {
@@ -18,6 +20,12 @@ Euroquiz.QuestionController = function($scope, eurovision) {
 	
 	$scope.giveAnswer = function(guess) {
 		$scope.state.guess = guess;
+		
+		if ( guess === $scope.question.answer ) {
+			$scope.state.correct += 1;
+		} else {
+			$scope.state.incorrect += 1;
+		}
 	};
 	
 	$scope.proceed = function() {
