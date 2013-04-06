@@ -1,6 +1,6 @@
 * {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html {
@@ -49,7 +49,7 @@ html {
 
 body {
 	margin: 0 auto;
-	line-height: 13.5em;
+	line-height: 16.5em;
 	text-align: center;
 }
 	
@@ -107,17 +107,17 @@ body {
 	
 	.points {
 		overflow: auto;
+		text-align: right;
 	}
 		
 		.points > * {
-			display: block;
-			float: left;
-			width: 13.53em;
+			display: inline-block;
 			height: 2em;
+			padding: 0 1em;
 		}
 		
 		.points > * + * {
-			float: right;
+			margin-left: 0.5em;
 		}
 	
 	.options {
