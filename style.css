@@ -1,12 +1,33 @@
+html {
+	background-color: black;
+}
+
 div, ul, figure {
 	margin: 0;
 	padding: 0;
 }
 
 button {
-	font-size: 1em;
 	margin: 0;
 	cursor: pointer;
+	color: white;
+	background-color: hsl(220, 100%, 50%);
+	background-image: -webkit-linear-gradient( top, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.5) 100% );
+	background-image: -moz-linear-gradient( top, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.5) 100% );
+	background-image: -ms-linear-gradient( top, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.5) 100% );
+	background-image: -o-linear-gradient( top, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.5) 100% );
+	font-size: 1em;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+	border: 1px solid hsl(220, 50%, 50%);
+	border-radius: 0.25em;
+	text-shadow: 1px 1px 1px black;
+}
+
+button[disabled] {
+	background-color: hsl(0, 0%, 25%);
+	border-color: hsl(0, 0%, 25%);
+	color: hsl(0, 0%, 50%);
 }
 
 html {
@@ -69,12 +90,15 @@ body {
 		}
 		
 		.options > *.correct button {
-			color: hsl(110, 100%, 50%);
-			font-weight: bold;
+			background-color: hsl(100, 100%, 50%);
+			border-color: hsl(100, 100%, 50%);
+			color: white;
 		}
 		
 		.options > *.incorrect button {
-			color: red;
+			background-color: hsl(0, 100%, 50%);
+			border-color: hsl(0, 100%, 50%);
+			color: white;
 		}
 
 	.actions {
