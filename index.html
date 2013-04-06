@@ -25,8 +25,18 @@
 		<eurovision-video
 			class="video"
 			data-video="question.videoID"
-			data-mask="!state.guess"></eurovision-video><!--
+			data-mask="!state.guess"
+			data-visible="state.showVideo"></eurovision-video><!--
 		--><div class="controls">
+			<ul class="settings">
+				<li>
+					<input
+						id="show-video"
+						type="checkbox"
+						data-ng-model="state.showVideo"><!--
+					--><label for="show-video">Show Video</label>
+				</li>
+			</ul>
 			<ul class="points">
 				<li class="correct">{{state.correct}}</li><!--
 				--><li class="incorrect">{{state.incorrect}}</li>

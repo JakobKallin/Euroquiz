@@ -3,7 +3,8 @@ Euroquiz.QuestionController = function($scope, eurovision) {
 		video: null,
 		guess: null,
 		correct: 0,
-		incorrect: 0
+		incorrect: 0,
+		showVideo: true
 	};
 	
 	$scope.optionClass = function(option) {
