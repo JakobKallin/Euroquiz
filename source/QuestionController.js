@@ -1,4 +1,14 @@
-Euroquiz.QuestionController = function($scope, eurovision) {
+Euroquiz.QuestionController = function($scope, eurovision, $location) {
+	var year = Number($location.search().year);
+	if ( !isNaN(year) ) {
+		var yearVideos = eurovision.videos.filter(function(v) {
+			return v.year === year;
+		});
+		if ( yearVideos.length > 0 ) {
+			eurovision.videos = yearVideos;
+		}
+	}
+	
 	$scope.state = {
 		video: null,
 		guess: null,

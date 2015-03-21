@@ -19,6 +19,9 @@
 			module.service('eurovision', function() {
 				return Euroquiz.eurovision;
 			});
+			module.config(function($locationProvider) {
+				$locationProvider.html5Mode(true);
+			});
 		</script>
 	</head>
 	<body data-ng-controller="Euroquiz.QuestionController">
